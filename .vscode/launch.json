@@ -5,7 +5,7 @@
       "name": "eval on hicodet",
       "type": "debugpy",
       "request": "launch",
-      "program": "${file}",
+      "program": "main.py",
       "console": "integratedTerminal",
       "args": [
         "--batch_size", "64",
@@ -24,6 +24,29 @@
         "--description_file_path", "hico_hoi_descriptions.json",
         "--eval",
         "--pretrained", "checkpoints/hico-checkpoint0075.pth"
+      ]
+    },
+    {
+      "name": "train on hicodet",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "main.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--batch_size", "4",
+        "--output_dir", "results",
+        "--epochs", "80",
+        "--lr", "1e-4",
+        "--min-lr", "1e-7",
+        "--hoi_token_length", "25",
+        "--enable_dec",
+        "--dataset_file", "hico",
+        "--multi_scale", "true",
+        "--f_idxs", "5", "8", "11",
+        "--set_cost_hoi_type", "5",
+        "--use_aux_text", "true",
+        "--enable_focal_loss",
+        "--description_file_path", "hico_hoi_descriptions.json",
       ]
     }
   ]
