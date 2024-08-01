@@ -23,7 +23,7 @@ Our code is built upon [CLIP](https://github.com/openai/CLIP). This repo require
 
 ```bash
 conda install pytorch torchvision cudatoolkit=11.3 -c pytorch
-pip install ftfy regex tqdm numpy Pillow matplotlib
+pip install ftfy regex tqdm numpy Pillow matplotlib fvcore scipy
 ```
 
 ### Dataset
